@@ -1,6 +1,6 @@
 #include <ESP8266WiFi.h>
 
-const char* ssids[] = {"Never gonna give you up","Never gonna let you down","Never gonna run around and desert you","Never gonna make you cry","Never gonna say goodbye","Never gonna tell a lie and hurt you"};
+const char* ssids[] = {"Never gonna give you up","Never gonna let you down","Never gonna run around", "and desert you","Never gonna make you cry","Never gonna say goodbye","Never gonna tell a lie","and hurt you"};
 const char* pass = "pass_goes_here";
 void setup() {
   // put your setup code here, to run once:
@@ -15,7 +15,7 @@ void setup() {
     delay(5000);
     WiFi.softAPdisconnect(false);
     currentssidno = currentssidno + 1;
-    if (currentssidno == 6) //please change this count if you change the amount of ssids
+    if (currentssidno == 8) //please change this count if you change the amount of ssids
     {
       currentssidno = 0;
     }
